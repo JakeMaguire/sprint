@@ -1,41 +1,51 @@
+import Navigation from "@/components/navigation";
 import Sidebar from "@/components/sidebar";
 import { DndContext } from "@dnd-kit/core";
 
 import { UserIcon } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import skincare from "../../public/skincare.jpg";
 
 export default function Home() {
   return (
-    <main className="grid bg-zinc-300 min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
-      <Sidebar />
+    <main>
+      <div className="grid grid-cols-2 gap-8 mt-24 items-center">
+        <div className="p-24 justify-center scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+          Really cool interesting tagline here. No idea what it will be.
+        </div>
+        <div className="flex justify-center items-center">
+          <Image src={skincare} alt="" height={600} />
+        </div>
+      </div>
 
-      <div className="m-2 p-3 bg-slate-50 rounded-sm">
-        <h2 className="text-2xl font-semibold tracking-tight">
-          Current Sprint
-        </h2>
+      <div className="grid grid-cols-5 text-center mt-24 space-x-4">
+        <Link href="/product">
+          <div className="h-80 bg-slate-300">PICTURE 1</div>
+        </Link>
+        <div className="h-80 bg-slate-300">PICTURE 2</div>
+        <div className="h-80 bg-slate-300">PICTURE 3</div>
+        <div className="h-80 bg-slate-300">PICTURE 4</div>
+        <div className="h-80 bg-slate-300">PICTURE 5</div>
+      </div>
 
-        <div className="grid grid-cols-4 gap-4 space-x-8 mt-2">
-          <div className="bg-gray-200 h-full p-4 space-y-2">
-            <span>Todo</span>
-            <div className="p-4 bg-white rounded-sm text-sm space-y-2">
-              <div className="flex justify-between">
-                <div className=" text-muted-foreground">JIRA-1456</div>
-                <UserIcon className="h-4 w-4" />
-              </div>
-              <div>Create new component for library</div>
-            </div>
+      <div className="grid grid-cols-2 gap-8 mt-24 items-center">
+        <div className="flex justify-center items-center">
+          <Image src={skincare} alt="" height={600} />
+        </div>
+        <div className="p-24 justify-center scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+          Really cool interesting tagline here. No idea what it will be.
+        </div>
+      </div>
 
-            <div className="p-4 bg-white rounded-sm text-sm space-y-2">
-              <div className="flex justify-between">
-                <div className=" text-muted-foreground">JIRA-1456</div>
-                <UserIcon className="h-4 w-4" />
-              </div>
-              <div>Create new component for library</div>
-            </div>
+      <div className="w-full relative bg-[#A44A3F]">
+        <div className="grid grid-cols-2 gap-8 mt-24 items-center">
+          <div className="p-24 justify-center scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+            Really cool interesting tagline here. No idea what it will be.
           </div>
-          <div>
-            <span>In Progress</span>
+          <div className="flex justify-center items-center">
+            <Image src={skincare} alt="" height={600} />
           </div>
-          <div>Done</div>
         </div>
       </div>
     </main>
