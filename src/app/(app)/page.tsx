@@ -1,11 +1,6 @@
-import Navigation from "@/components/navigation";
-import Sidebar from "@/components/sidebar";
-import { DndContext } from "@dnd-kit/core";
-
-import { UserIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import skincare from "../../public/skincare.jpg";
+import skincare from "@/../public/skincare.jpg";
 
 export default function Home() {
   return (

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import skincare from "../../../public/skincare.jpg";
+import skincare from "@/../public/skincare.jpg";
 
 export default function Routines() {
   return (

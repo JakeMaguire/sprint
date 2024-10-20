@@ -1,5 +1,5 @@
 import Image from "next/image";
-import skincare from "../../../public/skincare.jpg";
+import skincare from "@/../public/skincare.jpg";
 import { StarHalf, StarIcon } from "lucide-react";
 import Reviews from "./components/reviews";
 import Lists from "./components/lists";
