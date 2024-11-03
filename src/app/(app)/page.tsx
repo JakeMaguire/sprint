@@ -4,6 +4,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import {
@@ -61,53 +63,40 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="container">
-        <p className="font-bold text-lg">Most Popular</p>
-        <div className="grid grid-cols-4 mt-2 space-x-4">
-          <div>
-            <Link href="/product">
-              <Image
-                src="https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dwce8a7cdf/Images/products/The%20Ordinary/rdn-niacinamide-10pct-zinc-1pct-30ml.png?sw=320&sh=320&sm=fit"
-                alt=""
-                width={320}
-                height={320}
-                className="bg-slate-100"
-              />
-            </Link>
-            <p className="mt-2">Saccharomyces Ferment 30% Milky Toner</p>
-          </div>
-          <div>
-            <Image
-              src="https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dw8b57fa2b/Images/products/The%20Ordinary/ord-glyc-acid-7pct-100ml-Aug-UPC.png?sw=320&sh=320&sm=fit"
-              alt=""
-              width={320}
-              height={320}
-              className="bg-slate-100"
-            />
-            <p className="mt-2">
-              Natural Moisturizing Factors + Inulin Body Lotion
-            </p>
-          </div>
-          <div>
-            <Image
-              src="https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dw8d4bac7c/Images/products/The%20Ordinary/ord-retinal-02pct-emulsion-15ml.png?sw=800&sh=800&sm=fit"
-              alt=""
-              width={320}
-              height={320}
-              className="bg-slate-100"
-            />
-            <p className="mt-2">Niacinamide 5% Face and Body Emulsion</p>
-          </div>
-          <div>
-            <Image
-              src="https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dwedfce090/Images/products/The%20Ordinary/rdn-azelaic-acid-suspension-10pct-100ml.png?sw=320&sh=320&sm=fit"
-              alt=""
-              width={320}
-              height={320}
-              className="bg-slate-100"
-            />
-            <p className="mt-2">Balancing & Clarifying Serum</p>
-          </div>
+      <div>
+        <p className="font-bold text-xl text-center">Most Popular</p>
+        <div className="flex justify-center mt-4">
+          <Carousel
+            opts={{
+              align: "start",
+            }}
+            className="w-11/12"
+          >
+            <CarouselContent>
+              {Array.from({ length: 5 }).map((_, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <Card className="">
+                      <CardContent className="p-0 flex flex-col aspect-square items-center justify-center">
+                        <Image
+                          src="https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dwce8a7cdf/Images/products/The%20Ordinary/rdn-niacinamide-10pct-zinc-1pct-30ml.png?sw=320&sh=320&sm=fit"
+                          alt=""
+                          height={720}
+                          width={720}
+                          className="bg-slate-100"
+                        />
+                        <p className="mt-2 text-sm p-2">
+                          Saccharomyces Ferment 30% Milky Toner
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </div>
 
