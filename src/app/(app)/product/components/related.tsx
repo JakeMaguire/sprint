@@ -10,14 +10,14 @@ export default function Related() {
       </h3>
 
       <div className="mt-2">
-        <div className="grid grid-cols-8 gap-4 text-sm">
+        <div className="grid grid-cols-4 gap-4 text-sm">
           {Array.from({ length: 4 }).map((_, index) => (
             <div key={index} className="space-y-2">
               <div className="overflow-hidden rounded-md">
                 <Image
                   src={skincare}
                   alt=""
-                  width={250}
+                  width={350}
                   height={350}
                   className="h-auto w-auto object-cover transition-all hover:scale-105"
                 />

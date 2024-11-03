@@ -5,8 +5,10 @@ export default function Routines() {
   return (
     <main>
       <div className="mt-16 text-center">
-        <h1>Cleansers</h1>
-        <h4>Description about cleansers</h4>
+        <h1>Routines</h1>
+        <h4 className="text-muted-foreground">
+          Search through community created routines
+        </h4>
       </div>
 
       <div className="mt-16">

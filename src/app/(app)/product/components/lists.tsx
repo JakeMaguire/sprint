@@ -8,19 +8,17 @@ export default function Lists() {
   return (
     <div className="mt-14">
       <h3 className="scroll-m-20 text-2xl font-semibold text-[#A44A3F] tracking-tight">
-        Lists
+        Routines
       </h3>
 
       <div className="mt-2">
-        <div className="grid grid-cols-8 gap-4 text-sm">
-          {Array.from({ length: 8 }).map((_, index) => (
+        <div className="grid grid-cols-3 gap-4 text-sm">
+          {Array.from({ length: 3 }).map((_, index) => (
             <div key={index} className="space-y-2">
               <div className="overflow-hidden rounded-md">
                 <Image
                   src={skincare}
                   alt=""
-                  width={250}
-                  height={350}
                   className="h-auto w-auto object-cover transition-all hover:scale-105"
                 />
               </div>

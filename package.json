@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@dnd-kit/core": "^6.1.0",
+    "@icons-pack/react-simple-icons": "^10.1.0",
     "@payloadcms/db-postgres": "3.0.0-beta.116",
     "@payloadcms/next": "3.0.0-beta.116",
     "@payloadcms/plugin-cloud": "3.0.0-beta.116",
@@ -26,6 +27,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
+    "embla-carousel-react": "^8.3.1",
     "graphql": "^16.8.1",
     "lucide-react": "^0.435.0",
     "next": "15.0.0-canary.173",
