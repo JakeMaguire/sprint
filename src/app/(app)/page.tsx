@@ -9,30 +9,36 @@ import {
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import {
-  ContactRound,
   ContactRoundIcon,
   ListIcon,
   SearchIcon,
   SquarePenIcon,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import hero from "../../../public/hero2.png";
 
 export default function Home() {
   return (
-    <main className="mt-[--navbar-height] space-y-36">
-      <div className="py-36 bg-black">
-        <div className="container grid grid-cols-2">
-          <div className="p-24 justify-center scroll-m-20 text-white">
-            <p className="text-4xl font-extrabold tracking-tight lg:text-5xl">
+    <main className="space-y-36">
+      <div className="">
+        <Image
+          src={hero}
+          alt=""
+          objectFit="cover"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 container grid grid-cols-2 mt-40">
+          <div className="p-36 justify-center scroll-m-20 text-white">
+            <p className="text-4xl font-extrabold tracking-tight lg:text-5xl font-Lora">
               Community for beauty
             </p>
             <p className="font-bold mt-4 text-lg">
               Discover new products and find your routine.
             </p>
-            <Button className="mt-4 bg-white text-black">
+            <Button className="mt-4 bg-white text-black rounded-3xl">
               Discover products
             </Button>
-            <Button className="mt-4 ml-2 bg-white text-black">
+            <Button className="mt-4 ml-2 bg-white text-black rounded-3xl">
               Join the community
             </Button>
           </div>
@@ -78,16 +84,18 @@ export default function Home() {
                   <div className="p-1">
                     <Card className="">
                       <CardContent className="p-0 flex flex-col aspect-square items-center justify-center">
-                        <Image
-                          src="https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dwce8a7cdf/Images/products/The%20Ordinary/rdn-niacinamide-10pct-zinc-1pct-30ml.png?sw=320&sh=320&sm=fit"
-                          alt=""
-                          height={720}
-                          width={720}
-                          className="bg-slate-100"
-                        />
-                        <p className="mt-2 text-sm p-2">
-                          Saccharomyces Ferment 30% Milky Toner
-                        </p>
+                        <Link href="/product">
+                          <Image
+                            src="https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dwce8a7cdf/Images/products/The%20Ordinary/rdn-niacinamide-10pct-zinc-1pct-30ml.png?sw=320&sh=320&sm=fit"
+                            alt=""
+                            height={720}
+                            width={720}
+                            className="bg-slate-100"
+                          />
+                          <p className="mt-2 text-sm p-2">
+                            Saccharomyces Ferment 30% Milky Toner
+                          </p>
+                        </Link>
                       </CardContent>
                     </Card>
                   </div>

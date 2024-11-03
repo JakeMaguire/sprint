@@ -1,10 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Lora, Poppins } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const lora = Lora({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-Lora",
+});
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: "300",
+  display: "swap",
+  variable: "--font-Poppins",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${lora.variable} ${poppins.variable} font-Poppins`}>
         <Navigation />
         {children}
         <Footer />
